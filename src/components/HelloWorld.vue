@@ -35,22 +35,14 @@
   </p>
 </template>
 
-<script lang="ts">
-import { ref, defineComponent } from 'vue'
+<script lang="ts" setup="props">
+import { ref } from 'vue'
 
-export default defineComponent({
-  name: 'HelloWorld',
-  props: {
-    msg: {
-      type: String,
-      required: true
-    }
-  },
-  setup: () => {
-    const count = ref(0)
-    return { count }
-  }
-})
+declare const props: {
+  msg: string
+}
+
+const count = ref(0)
 </script>
 
 <style scoped>
